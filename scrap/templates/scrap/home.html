@@ -1,0 +1,28 @@
+{% extends 'scrap/index.html' %}
+
+{% block content %}
+<div class="home-container">
+    <p>
+        Bienvenido a mi pagina dedicada a recolectar toda la informacion <br>
+        De los principales medios argentinos sobre el club <br>
+        <span class="home-title"> "River Plate"</span>
+
+    </p>
+    
+    <div class="display-options">
+        <div>
+            <a href="{% url 'diario' 'Diario Ole' %}"><button>Diario Ole</button></a>
+            <a href="{% url 'diario' 'El Grafico' %}"><button>El Grafico</button></a>
+        </div>
+        <div>
+            <a href="{% url 'diario' 'Clarin' %}"><button>Clarin</button></a>
+            <a href="{% url 'diario' 'TycSport' %}"><button >Tyc Sports</button></a>
+        </div> 
+    </div>
+    <div class="display-options-low">
+        <a href="{% url 'torneo' %}"><button>Tabla Liga Profesional</button></a>
+    </div>
+    
+</div>
+
+{% endblock %}

@@ -1,0 +1,49 @@
+{% extends 'scrap/index.html' %}
+{% block content %}
+{% include 'scrap/navbar.html' %}
+<div class="page-container">
+    <h1 class="title-page">{{title}}</h1>
+    <div class="card-container-grid">
+        {% for x in notices %}
+        <a href="{{x.url}}">
+        <div class="card">
+            <img src="{{x.image}}" alt="">
+            <div>
+                <div class="card-category">
+                    <p>{{x.relation}}</p>
+                </div>
+                <div class="card-text">
+                    <h3>{{x.title}}</h3>
+                </div>
+            </div>
+        </div>
+        </a>
+        {% endfor %}
+    </div>
+        
+</div>
+{% endblock%}
+
+<!-- <div class="album py-5">
+    <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        {% for x in notices %}
+        <a href="{{x.url}}">
+            <div class="col">
+            <div class="card shadow-sm">
+                <img src="{{x.image}}" class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"></img>
+                <div class="card-body">
+                    <p>{{x.relation}}</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                        <h2 class="card-text">{{x.title}}</h2>                        
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </a>
+    {% endfor %}
+    </div>
+</div>
+</div> -->

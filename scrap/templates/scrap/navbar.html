@@ -1,0 +1,15 @@
+{% load static %}
+<nav>
+    <a href="{% url 'Home' %}">
+    <img src="{% static 'scrap\images\channels4_profile.jpg' %}" alt="River plate" >
+    </a>
+ <div class="nav-list" style="padding-top: 10px;">
+    <ul>
+        <a href="{% url 'torneo' %}">Torneo</a>
+        <a href="{% url 'diario' 'Diario Ole'%}"><li>Diario Ole</li></a>
+        <a href="{% url 'diario' 'El Grafico'%}"><li>El Grafico</li></a>
+        <a href="{% url 'diario' 'Clarin'%}"><li>Clarin</li></a>
+        <a href="{% url 'diario' 'TycSport'%}"><li>Tys Sports</li></a>
+    </ul>
+</div>
+</nav>

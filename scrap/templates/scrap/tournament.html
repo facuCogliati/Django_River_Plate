@@ -1,0 +1,35 @@
+{% extends 'scrap/index.html' %}
+{% block content %}
+{% include 'scrap/navbar.html' %}
+<div class="tournament-container">
+    <table>
+        <thead>
+            <tr>
+            {% for x in headers %}
+            <th>{{x}}</th>
+            {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for x in tables %}
+            <tr>
+            <td>{{x.puesto}}</td>
+            <td>
+                <img src="https://www.promiedos.com.ar/{{x.img}}" alt="">
+                {{x.equipo}}
+            </td>
+            <td>{{x.puntos}}</td>
+            <td>{{x.pj}}</td>
+            <td>{{x.pg}}</td>
+            <td>{{x.pe}}</td>
+            <td>{{x.pp}}</td>
+            <td>{{x.gf}}</td>
+            <td>{{x.gc}}</td>
+            <td>{{x.dif}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        
+    </table>
+</div>
+{% endblock %}
